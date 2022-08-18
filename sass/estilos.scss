@@ -36,24 +36,8 @@ li {
 	}
 }
 
-footer {
-	margin-right: auto;
-	margin-left: auto;
-	width: 100%;
-	padding-top: 25px;
-	padding-bottom: 25px;
-	color: $color-texto;
-	text-align: center;
-	background-color: black;
-
-	.red-social {
-		display: inline-block;
-
-		&:hover {
-			transform: rotate(-20deg);
-		}
-	}	
-
+.navbar-toggler-icon {
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 .intro {
@@ -82,7 +66,7 @@ footer {
 	background-image: url(../images/ndn.jpg);
 	background-position: top left;
 	background-repeat: no-repeat;
-	background-size: 200px auto;
+	background-size: 150px auto;
 	display: flex;
 	background-color: #ff2d3c;
 	width: 100%;
@@ -90,13 +74,18 @@ footer {
 	p,h1,h2 {
 		color: $color-texto
 	}
+	
+	a:hover {
+		color: $color-texto;
+		text-decoration: underline;
+	}
 }
 
 .fondo-aqn {
 	background-image: url(../images/aqn.jpg);
 	background-position: top left;
 	background-repeat: no-repeat;
-	background-size: 200px auto;
+	background-size: 150px auto;
 	display: flex;
 	background-color: #00c2ca;
 	width: 100%;
@@ -104,19 +93,29 @@ footer {
 	p,h1,h2 {
 		color: $color-texto
 	}
+
+	a:hover {
+		color: $color-texto;
+		text-decoration: underline;
+	}
 }
 
 .fondo-duquesas {
 	background-image: url(../images/duquesas.jpg);
 	background-position: top left;
 	background-repeat: no-repeat;
-	background-size: 200px auto;
+	background-size: 150px auto;
 	display: flex;
 	background-color: #00CE7C;
 	width: 100%;
 
 	p,h1,h2 {
 		color: $color-texto
+	}
+
+	a:hover {
+		color: $color-texto;
+		text-decoration: underline;
 	}
 }
 
@@ -162,7 +161,7 @@ footer {
 		background-color: transparent;
 		padding: 10px;
 		border-radius: 15%;
-		transition-property: background;
+		transition-property: background-color;
 		transition-duration: 0.2s;
 		transition-timing-function: ease-in;
 		transition-delay: 0s;
@@ -175,7 +174,22 @@ footer {
 }
 
 
+footer {
+	margin-right: auto;
+	margin-left: auto;
+	width: 100%;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	color: $color-texto;
+	text-align: center;
+	background-color: black;
 
-.navbar-toggler-icon {
-	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+	.red-social {
+		display: inline-block;
+
+		&:hover {
+			transform: rotate(-20deg);
+		}
+	}	
+
 }
