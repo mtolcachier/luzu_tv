@@ -1,27 +1,28 @@
 html, body {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
+  font-weight: 300;
+  color: white;
   padding: 0;
   margin: 0; }
 
 a {
   text-decoration: none;
   color: white; }
+  a:hover {
+    color: white; }
 
 ul {
   margin: auto; }
 
-li {
-  list-style: none;
-  color: white; }
-  li a {
-    color: white;
+li, .nav-item {
+  list-style: none; }
+  li a, .nav-item a {
     background-color: black;
     transition-property: color;
     transition-duration: 0.3s;
     transition-timing-function: ease-in;
     transition-delay: 0s; }
-    li a:hover {
+    li a:hover, .nav-item a:hover {
       color: grey !important; }
 
 .navbar-toggler-icon {
@@ -29,15 +30,13 @@ li {
 
 .intro {
   width: 100%;
-  font-weight: 500;
   background-color: rgba(90, 90, 90, 0.5); }
   .intro p, .intro h1, .intro h2 {
     width: 400px;
-    margin-top: 20px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    color: white; }
+    font-weight: 500; }
 
 .fondo-intro {
   background-image: url(../images/fondo-intro.jpg);
@@ -46,44 +45,41 @@ li {
 
 .fondo-ndn {
   background-image: url(../images/ndn.jpg);
+  background-color: #ff2d3c;
   background-position: top left;
   background-repeat: no-repeat;
   background-size: 150px auto;
   display: flex;
-  background-color: #ff2d3c;
-  width: 100%; }
-  .fondo-ndn p, .fondo-ndn h1, .fondo-ndn h2 {
-    color: white; }
+  widht: 100%; }
+  .fondo-ndn p, .fondo-ndn h1, .fondo-ndn h2, .fondo-ndn a {
+    font-weight: 500; }
   .fondo-ndn a:hover {
-    color: white;
     text-decoration: underline; }
 
 .fondo-aqn {
   background-image: url(../images/aqn.jpg);
+  background-color: #00c2ca;
   background-position: top left;
   background-repeat: no-repeat;
   background-size: 150px auto;
   display: flex;
-  background-color: #00c2ca;
-  width: 100%; }
-  .fondo-aqn p, .fondo-aqn h1, .fondo-aqn h2 {
-    color: white; }
+  widht: 100%; }
+  .fondo-aqn p, .fondo-aqn h1, .fondo-aqn h2, .fondo-aqn a {
+    font-weight: 500; }
   .fondo-aqn a:hover {
-    color: white;
     text-decoration: underline; }
 
 .fondo-duquesas {
   background-image: url(../images/duquesas.jpg);
+  background-color: #00CE7C;
   background-position: top left;
   background-repeat: no-repeat;
   background-size: 150px auto;
   display: flex;
-  background-color: #00CE7C;
-  width: 100%; }
-  .fondo-duquesas p, .fondo-duquesas h1, .fondo-duquesas h2 {
-    color: white; }
+  widht: 100%; }
+  .fondo-duquesas p, .fondo-duquesas h1, .fondo-duquesas h2, .fondo-duquesas a {
+    font-weight: 500; }
   .fondo-duquesas a:hover {
-    color: white;
     text-decoration: underline; }
 
 .formulario {
@@ -101,17 +97,22 @@ li {
       background-color: transparent;
       padding: 10px;
       border-radius: 10px;
-      color: white; }
+      font-weight: 500; }
     .formulario div label {
-      color: white; }
+      font-weight: 500; }
+      .formulario div label input:focus {
+        background-color: black; }
   .formulario textarea {
-    width: 400px;
+    width: 350px;
     height: 200px;
     font-family: 'Montserrat', sans-serif;
     border: 2px solid white;
     background-color: transparent;
     padding: 10px;
-    border-radius: 10px; }
+    border-radius: 10px;
+    color: white; }
+  .formulario .input:focus {
+    background-color: black; }
   .formulario .boton {
     border: 2px solid white;
     color: white;
@@ -132,7 +133,6 @@ footer {
   width: 100%;
   padding-top: 25px;
   padding-bottom: 25px;
-  color: white;
   text-align: center;
   background-color: black; }
   footer .red-social {

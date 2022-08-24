@@ -1,9 +1,18 @@
 $color-texto: white;
+$semibold: 500;
 
+@mixin fondos {
+	background-position: top left;
+	background-repeat: no-repeat;
+	background-size: 150px auto;
+	display: flex;
+	widht: 100%;
+}
 
 html,body {
 	font-family: 'Montserrat', sans-serif;
-	font-weight: 500;
+	font-weight: 300;
+	color: $color-texto;
 	padding: 0;
 	margin: 0;
 }
@@ -11,6 +20,10 @@ html,body {
 a {
 	text-decoration: none;
 	color: $color-texto;
+
+	&:hover {
+		color: $color-texto;
+	}
 }
 
 ul {
@@ -18,12 +31,10 @@ ul {
 }
 
 
-li {
+li, .nav-item {
 	list-style: none;
-	color: $color-texto;
 
 	a {
-		color: $color-texto;
 		background-color: black;
 		transition-property: color;
 		transition-duration: 0.3s;
@@ -42,16 +53,14 @@ li {
 
 .intro {
 	width: 100%;
-	font-weight: 500;
 	background-color: rgba(90, 90, 90, 0.5);
 
 	p,h1,h2 {
 		width: 400px;
-		margin-top: 20px;
 		text-align: center;
 		margin-left: auto;
 		margin-right: auto;
-		color: $color-texto;
+		font-weight: $semibold;
 	}
 }
 
@@ -64,57 +73,43 @@ li {
 
 .fondo-ndn {
 	background-image: url(../images/ndn.jpg);
-	background-position: top left;
-	background-repeat: no-repeat;
-	background-size: 150px auto;
-	display: flex;
 	background-color: #ff2d3c;
-	width: 100%;
+	@include fondos;
 
-	p,h1,h2 {
-		color: $color-texto
+	p,h1,h2,a {
+		font-weight: $semibold;
 	}
 	
 	a:hover {
-		color: $color-texto;
 		text-decoration: underline;
 	}
 }
 
 .fondo-aqn {
 	background-image: url(../images/aqn.jpg);
-	background-position: top left;
-	background-repeat: no-repeat;
-	background-size: 150px auto;
-	display: flex;
 	background-color: #00c2ca;
-	width: 100%;
+	@include fondos;
 
-	p,h1,h2 {
-		color: $color-texto
+	p,h1,h2,a {
+		font-weight: $semibold;
+
 	}
 
 	a:hover {
-		color: $color-texto;
 		text-decoration: underline;
 	}
 }
 
 .fondo-duquesas {
 	background-image: url(../images/duquesas.jpg);
-	background-position: top left;
-	background-repeat: no-repeat;
-	background-size: 150px auto;
-	display: flex;
 	background-color: #00CE7C;
-	width: 100%;
+	@include fondos;
 
-	p,h1,h2 {
-		color: $color-texto
+	p,h1,h2,a {
+		font-weight: $semibold;
 	}
 
 	a:hover {
-		color: $color-texto;
 		text-decoration: underline;
 	}
 }
@@ -136,22 +131,32 @@ li {
 			background-color: transparent;
 			padding: 10px;
 			border-radius: 10px;
-			color: $color-texto;
+			font-weight: $semibold;
 		}
 
 		label {
-			color: $color-texto
+			font-weight: $semibold;
+
+			input:focus {
+				background-color: black;
+			}
 		}
 	}
 
 	textarea {
-		width: 400px;
+		width: 350px;
 		height: 200px;
 		font-family: 'Montserrat', sans-serif;
 		border: 2px solid $color-texto;
 		background-color: transparent;
 		padding: 10px;
 		border-radius: 10px;
+		color: $color-texto;
+
+	}
+
+	.input:focus {
+		background-color: black;
 	}
 
 	.boton {
@@ -180,7 +185,6 @@ footer {
 	width: 100%;
 	padding-top: 25px;
 	padding-bottom: 25px;
-	color: $color-texto;
 	text-align: center;
 	background-color: black;
 
