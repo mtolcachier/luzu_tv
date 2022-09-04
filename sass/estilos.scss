@@ -1,12 +1,12 @@
 $color-texto: white;
-$semibold: 500;
+$semibold: 550;
 
 @mixin fondos {
 	background-position: top left;
 	background-repeat: no-repeat;
 	background-size: 150px auto;
 	display: flex;
-	widht: 100%;
+	width: 100%;
 }
 
 html,body {
@@ -51,26 +51,57 @@ li, .nav-item {
 	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-.intro {
-	width: 100%;
-	background-color: rgba(90, 90, 90, 0.5);
 
-	p,h1,h2 {
-		background-color: grey;
-		width: 400px;
-		text-align: center;
-		margin-left: auto;
-		margin-right: auto;
-		font-weight: $semibold;
-	}
-}
 
 .fondo-intro {
 	background-image: url(../images/fondo-intro.jpg);
 	background-size: 100% auto;
 	display: flex;
-}
+	flex-wrap: wrap;
 
+	.intro {
+	width: 100%;
+	background-color: rgba(90, 90, 90, 0.5);
+
+		p,h1,h2,span {
+			background-color: grey;
+			width: 400px;
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+			font-weight: $semibold;
+		}
+
+		h5:hover {
+			text-decoration: underline;	
+		}
+
+		.card-img-top {
+
+			transition-property: background-color opacity;
+			transition-duration: 0.3s;
+			transition-timing-function: ease-in;
+			transition-delay: 0s;
+
+			&:hover {
+				background-color: black;
+				opacity: 0.7;
+
+			}
+		}
+		
+		.forms {
+			display: flex;
+			justify-content: center;
+
+			.form-control {
+				width: 300px;	
+			}
+		}
+
+	}
+
+}
 
 .fondo-ndn {
 	background-image: url(../images/ndn.jpg);
@@ -83,6 +114,14 @@ li, .nav-item {
 	
 	a:hover {
 		text-decoration: underline;
+	}
+
+	.img-fluid {
+		transition: transform .5s ease;
+			
+		&:hover {
+			transform: scale(1.2);
+		}
 	}
 }
 
@@ -99,6 +138,14 @@ li, .nav-item {
 	a:hover {
 		text-decoration: underline;
 	}
+
+	.img-fluid {
+		transition: transform .5s ease;
+			
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
 }
 
 .fondo-duquesas {
@@ -112,6 +159,14 @@ li, .nav-item {
 
 	a:hover {
 		text-decoration: underline;
+	}
+
+	.img-fluid {
+		transition: transform .5s ease;
+			
+		&:hover {
+			transform: scale(1.2);
+		}
 	}
 }
 
@@ -169,7 +224,7 @@ li, .nav-item {
 		border: 2px solid $color-texto;
 		color: $color-texto;
 		text-align: center;
-		background-color: transparent;
+		background-color: grey;
 		padding: 10px;
 		border-radius: 15%;
 		transition-property: background-color;
@@ -178,7 +233,7 @@ li, .nav-item {
 		transition-delay: 0s;
 
 		&:hover {
-			background-color: darkgrey;
+			background-color: black;
 		}
 	}
 
@@ -200,6 +255,6 @@ footer {
 		&:hover {
 			transform: rotate(-20deg);
 		}
-	}	
+	}
 
 }
