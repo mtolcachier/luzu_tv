@@ -1,5 +1,5 @@
 $color-texto: white;
-$semibold: 550;
+$semibold:600;
 
 @mixin fondos {
 	background-position: top left;
@@ -13,6 +13,7 @@ html,body {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 300;
 	color: $color-texto;
+	letter-spacing: 1px;
 	padding: 0;
 	margin: 0;
 }
@@ -65,7 +66,6 @@ li, .nav-item {
 
 		p,h1,h2,span {
 			background-color: grey;
-			width: 400px;
 			text-align: center;
 			margin-left: auto;
 			margin-right: auto;
@@ -172,7 +172,6 @@ li, .nav-item {
 
 .formulario {
 	display: block;
-	width: 100%;
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
@@ -182,7 +181,6 @@ li, .nav-item {
 		margin-bottom: 25px;
 
 		.info-form {
-			width: 200px;
 			border: 2px solid $color-texto;
 			background-color: transparent;
 			padding: 10px;
@@ -210,7 +208,7 @@ li, .nav-item {
 		font-family: 'Montserrat', sans-serif;
 		border: 2px solid $color-texto;
 		background-color: transparent;
-		padding: 10px;
+		/*padding: 10px;*/
 		border-radius: 10px;
 		color: $color-texto;
 
